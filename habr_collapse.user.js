@@ -21,7 +21,7 @@ win.addEventListener("load", function() {
 
     $('.voting-wjt_comments').filter(function() {
         return $(this).parent().parent().next().children().length > 0;
-    }).before('<a href="#" class="comment_toggle" title="Свернуть ветку">[–]</a>');
+    }).before(function() { return '<a href="#" class="comment_toggle" title="Свернуть ветку">[–] (' + $(this).parent().parent().next().find('div.comment').length + ')</a>';});
 
     $('.comment__message_banned').filter(function() {
         return $(this).parent().next().children().length > 0;
