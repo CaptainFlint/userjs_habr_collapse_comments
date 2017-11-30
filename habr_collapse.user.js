@@ -32,12 +32,12 @@ win.addEventListener("load", function() {
     $('.comment_toggle').on("click", function() {
         $(this).parent().parent().next().toggle();
         if ($(this).text() == '[–]') {
-            $(this).text('[+]');
+            $(this).text('[+] (' + $(this).parent().parent().next().find('div.comment').length + ')');
             $(this).css({'color': 'red', 'font-weight': 'bold'});
             $(this).attr('title', "Развернуть ветку");
         }
         else {
-            $(this).text('[–]')
+            $(this).text('[–] (' + $(this).parent().parent().next().find('div.comment').length + ')')
             $(this).css({'color': '', 'font-weight': ''});
             $(this).attr('title', "Свернуть ветку");
         }
