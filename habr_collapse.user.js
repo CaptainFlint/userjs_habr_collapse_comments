@@ -25,7 +25,7 @@ win.addEventListener("load", function() {
 
     $('.comment__message_banned').filter(function() {
         return $(this).parent().next().children().length > 0;
-    }).append('<a href="#" class="comment_toggle" style="margin-left: 10px;" title="Свернуть ветку">[–]</a>');
+    }).append(function() { return '<a href="#" class="comment_toggle" style="margin-left: 10px;" title="Свернуть ветку">[–] (' + $(this).parent().next().find('div.comment').length + ')</a>';});
 
     $('.comments-section__subscribe-panel').before('<a href="#" class="all_comments_hide" style="margin-left: 10px;" title="Свернуть все ветки">[ – – – ]</a><a href="#" class="all_comments_show" style="color: red; font-weight: bold; margin-left: 10px;" title="Развернуть все ветки">[ + + + ]</a>');
 
