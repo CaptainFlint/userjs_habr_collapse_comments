@@ -3,7 +3,7 @@
 // @description     Allows to collapse/expand comment subtrees
 // @author          Aleksey Borodin (@minamoto), Konstantin Vlasov (@CaptainFlint)
 // @namespace       Habrahabr
-// @version         1.1
+// @version         1.2
 // @include         https://geektimes.ru/*
 // @include         https://habrahabr.ru/*
 // @updateURL       https://raw.githubusercontent.com/CaptainFlint/userjs_habr_collapse_comments/master/habr_collapse.user.js
