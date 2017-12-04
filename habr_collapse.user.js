@@ -31,7 +31,7 @@ win.addEventListener("load", function() {
 
     $('.comment_toggle').on("click", function() {
         $(this).parent().parent().next().toggle();
-        if ($(this).text() == '[–]') {
+        if ($(this).text().substr(0, 3) == '[–]') {
             $(this).text('[+] (' + $(this).parent().parent().next().find('div.comment').length + ')');
             $(this).css({'color': 'red', 'font-weight': 'bold'});
             $(this).attr('title', "Развернуть ветку");
