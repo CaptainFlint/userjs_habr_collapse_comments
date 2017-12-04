@@ -21,23 +21,23 @@ win.addEventListener("load", function() {
 
     $('.voting-wjt_comments').filter(function() {
         return $(this).parent().parent().next().children().length > 0;
-    }).before('<a href="#" class="comment_toggle" title="Свернуть ветку">[–]</a>');
+    }).before(function() { return '<a href="#" class="comment_toggle" title="Свернуть ветку">[–] (' + $(this).parent().parent().next().find('div.comment').length + ')</a>';});
 
     $('.comment__message_banned').filter(function() {
         return $(this).parent().next().children().length > 0;
-    }).append('<a href="#" class="comment_toggle" style="margin-left: 10px;" title="Свернуть ветку">[–]</a>');
+    }).append(function() { return '<a href="#" class="comment_toggle" style="margin-left: 10px;" title="Свернуть ветку">[–] (' + $(this).parent().next().find('div.comment').length + ')</a>';});
 
     $('.comments-section__subscribe-panel').before('<a href="#" class="all_comments_hide" style="margin-left: 10px;" title="Свернуть все ветки">[ – – – ]</a><a href="#" class="all_comments_show" style="color: red; font-weight: bold; margin-left: 10px;" title="Развернуть все ветки">[ + + + ]</a>');
 
     $('.comment_toggle').on("click", function() {
         $(this).parent().parent().next().toggle();
         if ($(this).text() == '[–]') {
-            $(this).text('[+]');
+            $(this).text('[+] (' + $(this).parent().parent().next().find('div.comment').length + ')');
             $(this).css({'color': 'red', 'font-weight': 'bold'});
             $(this).attr('title', "Развернуть ветку");
         }
         else {
-            $(this).text('[–]')
+            $(this).text('[–] (' + $(this).parent().parent().next().find('div.comment').length + ')')
             $(this).css({'color': '', 'font-weight': ''});
             $(this).attr('title', "Свернуть ветку");
         }
