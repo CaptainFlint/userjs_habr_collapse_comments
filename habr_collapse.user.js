@@ -3,7 +3,7 @@
 // @description     Allows to collapse/expand comment subtrees
 // @author          Aleksey Borodin (@minamoto), Konstantin Vlasov (@CaptainFlint)
 // @namespace       Habrahabr
-// @version         1.1
+// @version         1.2
 // @include         https://geektimes.com/*
 // @include         https://habr.com/*
 // @updateURL       https://raw.githubusercontent.com/CaptainFlint/userjs_habr_collapse_comments/master/habr_collapse.user.js
@@ -31,7 +31,7 @@ win.addEventListener("load", function() {
 
     $('.comment_toggle').on("click", function() {
         $(this).parent().parent().next().toggle();
-        if ($(this).text() == '[–]') {
+        if ($(this).text().substr(0, 3) == '[–]') {
             $(this).text('[+] (' + $(this).parent().parent().next().find('div.comment').length + ')');
             $(this).css({'color': 'red', 'font-weight': 'bold'});
             $(this).attr('title', "Развернуть ветку");
