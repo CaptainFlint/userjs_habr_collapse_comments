@@ -4,8 +4,8 @@
 // @author          Aleksey Borodin (@minamoto), Konstantin Vlasov (@CaptainFlint)
 // @namespace       Habrahabr
 // @version         1.2
-// @include         https://geektimes.ru/*
-// @include         https://habrahabr.ru/*
+// @include         https://geektimes.com/*
+// @include         https://habr.com/*
 // @updateURL       https://raw.githubusercontent.com/CaptainFlint/userjs_habr_collapse_comments/master/habr_collapse.user.js
 // ==/UserScript==
 
